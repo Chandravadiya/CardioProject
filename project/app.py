@@ -584,10 +584,10 @@ with tab_metrics:
 
     if os.path.exists(conf_path):
         with img1_col:
-            st.image(conf_path, caption="Confusion Matrix", use_container_width=True)
+            st.image(conf_path, caption="Confusion Matrix", use_column_width=True)
     if os.path.exists(roc_path):
         with img2_col:
-            st.image(roc_path, caption="ROC Curve", use_container_width=True)
+            st.image(roc_path, caption="ROC Curve", use_column_width=True)
 
 # ═════════════════════════════════════════════════════════════
 #  TAB 3 – MODEL COMPARISON
@@ -668,7 +668,7 @@ with tab_compare:
     # ── Combined ROC curves ──
     roc_cmp_path = os.path.join(PLOT_DIR, "roc_comparison.png")
     if os.path.exists(roc_cmp_path):
-        st.image(roc_cmp_path, caption="ROC Curve – Both Models", use_container_width=True)
+        st.image(roc_cmp_path, caption="ROC Curve – Both Models", use_column_width=True)
 
     # ── Feature cards ──
     st.markdown("<br>", unsafe_allow_html=True)
